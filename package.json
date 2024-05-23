@@ -11,9 +11,12 @@
   "description": "",
   "dependencies": {
     "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2",
     "nodemon": "^3.1.0"
   },
   "nodemonConfig": {
-    "ignore": ["norrisDb.json"]
+    "ignore": [
+      "norrisDb.json"
+    ]
   }
 }
