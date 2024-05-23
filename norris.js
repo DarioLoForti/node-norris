@@ -11,9 +11,6 @@ const readJSONData = (nomeFile) => {
         return []; // Se il file non esiste, ritorna un array vuoto
     }
     const fileData = fs.readFileSync(filePath, "utf-8");
-    if (fileData.trim() === "") {
-        return []; // Se il file è vuoto, ritorna un array vuoto
-    }
     return JSON.parse(fileData);
 }
 
@@ -59,7 +56,7 @@ const server = http.createServer((req, res) => {
                         res.end(`<h1>${newJoke}</h1>`);
                     });
             } else {
-                
+
                 // Se non è presente, aggiungi la battuta corrente
                 jokes.push(joke);
                 
